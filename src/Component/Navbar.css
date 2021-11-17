@@ -1,0 +1,32 @@
+.navbar-brand{
+    background-color: transparent;
+}
+.logo{
+    background-color:#000000;
+    width: 6rem;
+}
+
+.buttons{
+    position: relative;
+}
+
+.cart-button{
+    padding: 3px 6px;
+    width: 5rem;
+    border: 1px solid #000000;
+}
+
+.circle{
+    align-items: center;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+    border-radius: 50%;
+    width:15px;
+    line-height: 15px;
+}
+
+.icon{
+    color: black;
+    font-size: 1.9rem;
+}
