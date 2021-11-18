@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Simple E-commerce practise site yu can see this https://e-commerce-apps.netlify.app
+Simple E-commerce practise site you can see this https://e-commerce-apps.netlify.app
 
 ## Available Scripts
 
