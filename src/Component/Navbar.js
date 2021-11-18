@@ -2,14 +2,14 @@ import React from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import logoImg from "../logoImg/mylogo.jpg";
+import logoImg from "../logoImg/mylogo.png";
 import "./Navbar.css";
 
 const Navbar = () => {
 	const state = useSelector((state)=>state.handleCart)
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container d-flex">
           <Link to="/">
             <a className="navbar-brand">
@@ -36,17 +36,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to='/product' className="nav-link">
-                  Product
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link to='/cart' className="nav-link">Cart</Link>
               </li>
             </ul>
             <div className="buttons">
               <Link to='cart' className="cart-button mx-1 btn">
-                <IoCartOutline className="icon" />
+                <IoCartOutline className="icons" />
                 <span className="circle">{state.length }</span>
               </Link>
               <button className="mx-1 btn btn-outline-secondary">

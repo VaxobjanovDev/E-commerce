@@ -6,7 +6,7 @@ const Product = ({filter}) => {
         <>
           {filter.map((product)=>{
               return (
-                  <div className='col-md-3 my-2'>
+                  <div className='col-lg-3 col-md-4 col-sm-6 my-2'>
                       <div className='card h-100 text-center p-4' key={product.id}>
                           <img src={product.image} height='300px'/>
                           <div className='card-body mt-5'>
