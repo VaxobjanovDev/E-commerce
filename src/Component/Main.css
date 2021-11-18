@@ -9,3 +9,7 @@ html,body{
 .icon:hover{
     color: #ffffff;
 }
+
+.spinner{
+    margin-top: 20%;
+}
