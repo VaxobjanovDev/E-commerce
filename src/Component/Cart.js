@@ -1,5 +1,6 @@
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { addToCart, deleteItemCart } from "../redux/action";
 import "./Main.css";
 const Cart = () => {
@@ -37,7 +38,7 @@ const Cart = () => {
             <div className="col-md-4 mt-3">
               <h3>{product.title}</h3>
               <p className="lead fw-bold">
-                {product.qty}x${product.price} = ${product.qty * product.price}
+                {product.qty}x${product.price} = ${Math.round(product.qty * product.price)}
               </p>
               <button
                 onClick={() => handleDel(product)}
@@ -58,11 +59,19 @@ const Cart = () => {
     );
   };
 
-
   return (
-    <div>
+    <div className="container">
       {state.length === 0 && emptyCart()}
       {state.length !== 0 && state.map(cartItems)}
+      {state.length !== 0 && state.map(cartItems) ? (
+        <div className="col-md-12 d-flex justify-content-end">
+         <Link to='/modal'>
+         <button className="btn btn-outline-dark pe-3">Pay All</button>
+         </Link>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
